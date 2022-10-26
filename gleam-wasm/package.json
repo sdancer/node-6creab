@@ -1,8 +1,6 @@
 {
   "name": "gleam-wasm",
-  "collaborators": [
-    "Louis Pilfold <louis@lpil.uk>"
-  ],
+  "collaborators": ["Louis Pilfold <louis@lpil.uk>"],
   "version": "0.25.0-dev",
   "license": "SEE LICENSE IN LICENCE",
   "files": [
@@ -13,5 +11,6 @@
   ],
   "module": "gleam_wasm.js",
   "types": "gleam_wasm.d.ts",
-  "sideEffects": false
+  "sideEffects": false,
+  "type": "module"
 }

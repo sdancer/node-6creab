@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "gleam-wasm": "file:./pkg",
+    "gleam-wasm": "file:./gleam-wasm",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
