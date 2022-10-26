@@ -1,7 +1,7 @@
 // run `node index.js` in the terminal
 var importObject = null;
-WebAssembly.instantiateStreaming(fetch('./gl/gleam_wasm_bg.wasm'), importObject).then(function (obj) {
-    // Call an exported function:
-    console.log("something");
-});
-console.log("Hello Node.js!");
+const fs = require('fs');
+
+const wasmBuffer = fs.readFileSync('./gleam-wasm/gleam_wasm_bg.wasm');
+console.log(new Uint8Array(wasmBuffer));
+WebAssembly.instantiate(new Uint8Array(wasmBuffer));
