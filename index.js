@@ -592,6 +592,16 @@ const imports = { './gleam_wasm_wc_bg.js': __exports };
 
 import fs from 'fs';
 
+export function __wbg_isfile_46f602794ee0a10c(arg0, arg1) {
+  try {
+    const ret = is_file(getStringFromWasm0(arg0, arg1));
+    return ret;
+  } finally {
+    wasm.__wbindgen_free(arg0, arg1);
+  }
+}
+__exports['__wbg_isfile_46f602794ee0a10c'] = __wbg_isfile_46f602794ee0a10c;
+
 // Calling the readFileSync() method
 // to read 'input.txt' file
 const data = fs.readFileSync('gleam-wasm/gleam_wasm_wc_bg.wasm');
