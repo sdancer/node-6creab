@@ -1,16 +1,17 @@
 {
-  "name": "gleam-wasm",
-  "collaborators": ["Louis Pilfold <louis@lpil.uk>"],
+  "name": "gleam-wasm-wc",
+  "collaborators": [
+    "Louis Pilfold <louis@lpil.uk>"
+  ],
   "version": "0.25.0-dev",
   "license": "SEE LICENSE IN LICENCE",
   "files": [
-    "gleam_wasm_bg.wasm",
-    "gleam_wasm.js",
-    "gleam_wasm_bg.js",
-    "gleam_wasm.d.ts"
+    "gleam_wasm_wc_bg.wasm",
+    "gleam_wasm_wc.js",
+    "gleam_wasm_wc_bg.js",
+    "gleam_wasm_wc.d.ts"
   ],
-  "module": "gleam_wasm.js",
-  "types": "gleam_wasm.d.ts",
-  "sideEffects": false,
-  "type": "module"
+  "module": "gleam_wasm_wc.js",
+  "types": "gleam_wasm_wc.d.ts",
+  "sideEffects": false
 }
