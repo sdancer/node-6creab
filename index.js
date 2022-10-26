@@ -614,7 +614,7 @@ var x = WebAssembly.instantiate(data, imports).then((result) => {
 });
 
 await x;
-gleamWasm.init(false);
+gleamWasm.init(true);
 console.log('loaded');
 
 const gleam_input = 'fn main() { todo }';
