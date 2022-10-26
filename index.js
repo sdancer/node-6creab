@@ -1,7 +1,8 @@
 // run `node index.js` in the terminal
-var importObject = null;
-const fs = require('fs');
 
-const wasmBuffer = fs.readFileSync('./gleam-wasm/gleam_wasm_bg.wasm');
-console.log(new Uint8Array(wasmBuffer));
-WebAssembly.instantiate(new Uint8Array(wasmBuffer));
+import * as fs from 'gleam-wasm/gleam_wasm.js';
+
+console.log(fs);
+fs.asyncRead();
+
+console.log('pkg/gleam_wasm_bg.wasm');
