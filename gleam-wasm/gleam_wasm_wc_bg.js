@@ -1,3 +1,4 @@
+import { is_file } from './snippets/gleam-wasm-wc-ee8ec841b455ece1/files.js';
 import * as wasm from './gleam_wasm_wc_bg.wasm';
 
 const heap = new Array(32).fill(undefined);
@@ -249,6 +250,15 @@ export function __wbindgen_is_undefined(arg0) {
 export function __wbindgen_in(arg0, arg1) {
     const ret = getObject(arg0) in getObject(arg1);
     return ret;
+};
+
+export function __wbg_isfile_46f602794ee0a10c(arg0, arg1) {
+    try {
+        const ret = is_file(getStringFromWasm0(arg0, arg1));
+        return ret;
+    } finally {
+        wasm.__wbindgen_free(arg0, arg1);
+    }
 };
 
 export function __wbindgen_error_new(arg0, arg1) {
