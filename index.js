@@ -588,13 +588,13 @@ __exports['__wbindgen_debug_string'] = __wbindgen_debug_string;
 __exports['__wbindgen_throw'] = __wbindgen_throw;
 __exports['__wbindgen_memory'] = __wbindgen_memory;
 
-const imports = { './gleam_wasm_bg.js': __exports };
+const imports = { './gleam_wasm_wc_bg.js': __exports };
 
 import fs from 'fs';
 
 // Calling the readFileSync() method
 // to read 'input.txt' file
-const data = fs.readFileSync('gleam-wasm/gleam_wasm_bg.wasm');
+const data = fs.readFileSync('gleam-wasm/gleam_wasm_wc_bg.wasm');
 
 let gleamWasm;
 
