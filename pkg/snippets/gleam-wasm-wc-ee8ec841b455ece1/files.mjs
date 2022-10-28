@@ -54,7 +54,7 @@ export function fs_read_dir(path) {
 }
 
 export function fs_copy(from, to) {
-  console.log("fs_copy(",from, ",", to,")");
+//  console.log("fs_copy(",from, ",", to,")");
   fs.copyFileSync(from, to);
 }
 
