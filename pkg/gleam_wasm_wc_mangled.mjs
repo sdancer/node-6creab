@@ -609,7 +609,7 @@ __exports['__wbindgen_memory']=__wbindgen_memory;
 import fs from 'fs';
 
 const imports = { './gleam_wasm_wc_bg.js': __exports };
-const data = fs.readFileSync('pkg/gleam_wasm_wc_bg.wasm');
+const data = fs.readFileSync('pkg/0ed2871dcfcc09ef6187c8aa44ee52fc.wasm');
 
 var x = WebAssembly.instantiate(data, imports).then((result) => {
   wasm = result.instance.exports;
