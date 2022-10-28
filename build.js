@@ -1,7 +1,7 @@
 import fs from 'fs';
 import * as gleamWasm from './pkg/gleam_wasm_wc_mangled.mjs';
 
-gleamWasm.init(true);
+gleamWasm.init(false);
 console.log('loaded');
 
 const gleam_input = 'fn main() { todo }';
@@ -14,7 +14,8 @@ const sourceFiles = Object.assign(
   {}
 );
 
-const files = gleamWasm.build("javascript");
+const result = gleamWasm.build("javascript");
+console.log(result)
 
 //var ok = files['Ok'];
 //console.log(ok);

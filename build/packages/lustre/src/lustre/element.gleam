@@ -2,7 +2,7 @@
 
 // IMPORTS ---------------------------------------------------------------------
 
-import lustre/attribute.{ Attribute, attribute }
+import lustre/attribute.{ Attribute }
 
 // TYPES -----------------------------------------------------------------------
 
@@ -455,12 +455,12 @@ pub fn source (attributes: List(Attribute(action))) -> Element(action) {
 
 ///
 pub fn svg (attributes: List(Attribute(action)), children: List(Element(action))) -> Element(action) {
-    node("svg", [attribute("xmlns", "http://www.w3.org/2000/svg"), ..attributes], children)
+    node("svg", [attribute.attribute("xmlns", "http://www.w3.org/2000/svg"), ..attributes], children)
 }
 
 ///
 pub fn mathml (attributes: List(Attribute(action)), children: List(Element(action))) -> Element(action) {
-    node("mathml", [attribute("xmlns", "http://www.w3.org/1998/Math/MathML"), ..attributes], children)
+    node("mathml", [attribute.attribute("xmlns", "http://www.w3.org/1998/Math/MathML"), ..attributes], children)
 }
 
 // SCRIPTING -------------------------------------------------------------------

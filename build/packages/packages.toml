@@ -1,0 +1,3 @@
+[packages]
+lustre = "1.3.0"
+gleam_stdlib = "0.24.0"
