@@ -2,7 +2,6 @@ import fs from 'fs';
 import * as gleamWasm from './pkg/gleam_wasm_wc_mangled.mjs';
 
 gleamWasm.init(false);
-console.log('loaded');
 
 const gleam_input = 'fn main() { todo }';
 
