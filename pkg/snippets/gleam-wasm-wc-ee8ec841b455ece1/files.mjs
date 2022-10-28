@@ -6,32 +6,32 @@ console.log(`Current directory: ${cwd()}`);
 
 export function fs_is_directory(path) {
   const ret     = fs.existsSync(path) && fs.lstatSync(path).isDirectory()
-  console.log("is_directory(",path,") = ", ret);
+//  console.log("is_directory(",path,") = ", ret);
   return ret;
 }
 
 export function fs_is_file(path) {
   const ret     = fs.existsSync(path) && fs.lstatSync(path).isFile()
-  console.log("is_file(",path,") returning", ret);
+ // console.log("is_file(",path,") returning", ret);
   return ret;
 }
 
 export function fs_delete(path) {
   console.log("delete(",path,")");
   if (fs.existsSync(path)) { 
-    //fs.rmSync(path, { recursive: true, force: true });
+//    fs.rmSync(path, { recursive: true, force: true });
   }
 }
 
 export function fs_delete_file(path) {
   console.log("delete_file(",path,")");
   if (fs.existsSync(path)) { 
-    //fs.rmSync(path, { recursive: true, force: true });
+//    fs.rmSync(path, { recursive: true, force: true });
   }
 }
 
 export function fs_mkdir(path) {
-  console.log("mkdir(",path,")");
+//  console.log("mkdir(",path,")");
   fs.mkdirSync(path, { recursive: true });
 }
 
