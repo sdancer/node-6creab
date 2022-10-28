@@ -222,15 +222,6 @@ function handleError(f, args) {
     }
 }
 
-export function __wbg_fsdelete_9147ecfada71999e(arg0, arg1) {
-    try {
-        const ret = fs_delete(getStringFromWasm0(arg0, arg1));
-        return ret;
-    } finally {
-        wasm.__wbindgen_free(arg0, arg1);
-    }
-};
-
 export function __wbg_fsisdirectory_62025426d3082a48(arg0, arg1) {
     try {
         const ret = fs_is_directory(getStringFromWasm0(arg0, arg1));
@@ -253,21 +244,29 @@ export function __wbg_fsreaddir_cd2294d6362fe1a5(arg0, arg1) {
     }
 };
 
-export function __wbg_fsread_6eb11dd44f4e2263(arg0, arg1, arg2) {
-    try {
-        const ret = fs_read(getStringFromWasm0(arg1, arg2));
-        const ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-        const len0 = WASM_VECTOR_LEN;
-        getInt32Memory0()[arg0 / 4 + 1] = len0;
-        getInt32Memory0()[arg0 / 4 + 0] = ptr0;
-    } finally {
-        wasm.__wbindgen_free(arg1, arg2);
-    }
-};
-
 export function __wbg_fsisfile_5ccada8274c9a478(arg0, arg1) {
     try {
         const ret = fs_is_file(getStringFromWasm0(arg0, arg1));
+        return ret;
+    } finally {
+        wasm.__wbindgen_free(arg0, arg1);
+    }
+};
+
+export function __wbg_fswrite_2109457264ef0096(arg0, arg1, arg2, arg3) {
+    try {
+        var v0 = getArrayU8FromWasm0(arg2, arg3).slice();
+        wasm.__wbindgen_free(arg2, arg3 * 1);
+        const ret = fs_write(getStringFromWasm0(arg0, arg1), v0);
+        return ret;
+    } finally {
+        wasm.__wbindgen_free(arg0, arg1);
+    }
+};
+
+export function __wbg_fsdelete_9147ecfada71999e(arg0, arg1) {
+    try {
+        const ret = fs_delete(getStringFromWasm0(arg0, arg1));
         return ret;
     } finally {
         wasm.__wbindgen_free(arg0, arg1);
@@ -302,12 +301,10 @@ export function __wbg_fsdeletefile_4766a64c256d2c5f(arg0, arg1) {
     }
 };
 
-export function __wbg_fswrite_2109457264ef0096(arg0, arg1, arg2, arg3) {
+export function __wbg_fsread_6eb11dd44f4e2263(arg0, arg1) {
     try {
-        var v0 = getArrayU8FromWasm0(arg2, arg3).slice();
-        wasm.__wbindgen_free(arg2, arg3 * 1);
-        const ret = fs_write(getStringFromWasm0(arg0, arg1), v0);
-        return ret;
+        const ret = fs_read(getStringFromWasm0(arg0, arg1));
+        return addHeapObject(ret);
     } finally {
         wasm.__wbindgen_free(arg0, arg1);
     }
@@ -557,16 +554,16 @@ export function __wbindgen_memory() {
 };
 
 const __exports = {};
-__exports['__wbg_fsdelete_9147ecfada71999e']=__wbg_fsdelete_9147ecfada71999e;
 __exports['__wbg_fsisdirectory_62025426d3082a48']=__wbg_fsisdirectory_62025426d3082a48;
 __exports['__wbindgen_object_drop_ref']=__wbindgen_object_drop_ref;
 __exports['__wbg_fsreaddir_cd2294d6362fe1a5']=__wbg_fsreaddir_cd2294d6362fe1a5;
-__exports['__wbg_fsread_6eb11dd44f4e2263']=__wbg_fsread_6eb11dd44f4e2263;
 __exports['__wbg_fsisfile_5ccada8274c9a478']=__wbg_fsisfile_5ccada8274c9a478;
+__exports['__wbg_fswrite_2109457264ef0096']=__wbg_fswrite_2109457264ef0096;
+__exports['__wbg_fsdelete_9147ecfada71999e']=__wbg_fsdelete_9147ecfada71999e;
 __exports['__wbg_fscopy_338aaaefd8f484d1']=__wbg_fscopy_338aaaefd8f484d1;
 __exports['__wbg_fsmkdir_26c02f41c6303641']=__wbg_fsmkdir_26c02f41c6303641;
 __exports['__wbg_fsdeletefile_4766a64c256d2c5f']=__wbg_fsdeletefile_4766a64c256d2c5f;
-__exports['__wbg_fswrite_2109457264ef0096']=__wbg_fswrite_2109457264ef0096;
+__exports['__wbg_fsread_6eb11dd44f4e2263']=__wbg_fsread_6eb11dd44f4e2263;
 __exports['__wbindgen_string_get']=__wbindgen_string_get;
 __exports['__wbindgen_is_string']=__wbindgen_is_string;
 __exports['__wbindgen_error_new']=__wbindgen_error_new;

@@ -41,15 +41,15 @@ export function fs_write(path, contents) {
 }
 
 export function fs_read(path) {
-  const ret = fs.readFileSync(path).toString('latin1');
-  console.log("read(",path,") = ", ret);
-  return ret;
+  const ret = fs.readFileSync(path, {flag: 'r'});
+//  console.log("read(",path,") = ", ret);
+  return new Uint8Array(ret);
 }
 
 export function fs_read_dir(path) {
   const route = fspath.resolve(process.cwd(), path);
   const ret = fs.readdirSync( path ).map(x =>  path + '/' + x);
-  console.log("read_dir(",path,") = ", ret);
+//  console.log("read_dir(",path,") = ", ret);
   return ret;
 }
 
